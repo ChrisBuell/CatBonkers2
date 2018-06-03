@@ -36,14 +36,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Call Game piece, call first move, call game loop, skAction forever
         if UIDevice.current.userInterfaceIdiom == .phone {
             background = SKSpriteNode(imageNamed: "testMightyO.png")
-            print("iPhone")
+           // print("iPhone")
         }else{
             if UIScreen.main.bounds.width > 1024 {
                 background = SKSpriteNode(imageNamed: "midPavement.png")
-                print("large iPad")
+                //print("large iPad")
             }else{
                 background = SKSpriteNode(imageNamed: "smallerPavementArtboard.png")
-                print("small iPad")
+               // print("small iPad")
             }
             
         }
@@ -75,7 +75,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let walkAction = SKAction.animate(with: walkFrames, timePerFrame: 0.02)
             walkAnimation = SKAction.repeatForever(walkAction)
             
-            print("iphone ladybugs")
+            //print("iphone ladybugs")
         }else{
             let walkFrames:[SKTexture] = [
                 
@@ -87,7 +87,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 textureAtlas.textureNamed("BlueLadybug4.png")
                 
             ]
-            print("iPad ladybugs")
+            //print("iPad ladybugs")
            let walkAction = SKAction.animate(with: walkFrames, timePerFrame: 0.02)
             walkAnimation = SKAction.repeatForever(walkAction)
         }
